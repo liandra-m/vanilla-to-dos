@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #90dbf4;
+}
+
+body, h1, input, button{
+    font-family: 'Kalam', cursive;
+}
+
+input, button{
+    border: 0;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.content-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.content{
+    margin-top: 1em;
+    width: 60%;
+    background-color: #e6fdff;
+    border: 2px solid #3b67a196;
+    padding: 5em;
+    border-radius: 10px;
+}
+
+.header h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 48px;
+    word-spacing: .5em;
+}
+
+.add-to-do{
+    display: flex;
+    border: 1px solid #000;
+    border-radius: 10px;
+    justify-content: space-between;
+    margin: 1em 0;
+    font-size: 32px;
+    min-height: 50px;
+}
+
+.add-to-do input{
+    font-size: 22px;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.add-to-do button{
+    font-size: 22px;
+    padding: 0 2rem;
+}
+
+.add-to-do input{
+    border-radius: 10px 0 0 10px;
+}
+
+.add-to-do button{
+    border-radius: 0 10px 10px 0;
+}
+
+.add-to-do input:hover,
+.add-to-do input:active,
+.add-to-do input:focus{
+    outline: 0;
+    border: 0;
+} 
+
+.do-list{
+    list-style: none;
+    font-size: 24px;
+    margin: 1em 2em;
+}
+
+.do-list li{
+    display: flex;
+    justify-content: space-between;
+    margin: .5em 0;
+    width: 100%; 
+}
+
+.do-list span{
+    max-width: 75%; 
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.do-list .checked{
+    text-decoration: line-through;
+}
+
+.do-list input:not(.actions input){
+    width: 75%;
+    margin-right: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.actions input{
+    min-width: 30px;
+    min-height: 30px;
+    max-width: 30px;
+    max-height: 30px;
+    margin-right: 10px;
+}
+
+.do-list .actions{
+    display: flex;
+    align-items: center;
+}
+
+.actions svg{
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.actions svg:hover{
+    cursor: pointer;
+    opacity: .75;
+}
+
+
+.btn-edit{
+    fill: blue;
+    margin-right: 10px;
+}
+
+.btn-remove{
+    fill: red;
+}
