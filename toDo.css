@@ -4,141 +4,137 @@
 }
 
 body{
-    background-color: #90dbf4;
-}
-
-body, h1, input, button{
-    font-family: 'Kalam', cursive;
+    background-color: #e9f1f1;
 }
 
 input, button{
     border: 0;
+    outline: none;
 }
 
 button:hover{
     cursor: pointer;
 }
 
-.content-wrapper{
-    display: flex;
-    flex-direction: column;
+.wrapper{
     height: 100vh;
-    align-items: center;
-    padding: 0 1rem;
 }
 
 .content{
-    margin-top: 1em;
-    width: 60%;
-    background-color: #e6fdff;
-    border: 2px solid #3b67a196;
-    padding: 5em;
-    border-radius: 10px;
-}
-
-.header h1{
-    text-align: center;
-    font-weight: bold;
-    font-size: 48px;
-    word-spacing: .5em;
-}
-
-.add-to-do{
     display: flex;
-    border: 1px solid #000;
-    border-radius: 10px;
-    justify-content: space-between;
-    margin: 1em 0;
-    font-size: 32px;
-    min-height: 50px;
+    flex-direction: column;
+    align-items: center;
 }
 
-.add-to-do input{
-    font-size: 22px;
+header{
+    display: flex;
+    align-items: center;
     width: 100%;
-    padding: 0 1rem;
+    background-color: #4888DB;
+    min-height: 75px;
+    margin-bottom: 1.5rem;
 }
 
-.add-to-do button{
-    font-size: 22px;
-    padding: 0 2rem;
-}
-
-.add-to-do input{
-    border-radius: 10px 0 0 10px;
-}
-
-.add-to-do button{
-    border-radius: 0 10px 10px 0;
-}
-
-.add-to-do input:hover,
-.add-to-do input:active,
-.add-to-do input:focus{
-    outline: 0;
-    border: 0;
-} 
-
-.do-list{
-    list-style: none;
-    font-size: 24px;
-    margin: 1em 2em;
-}
-
-.do-list li{
+.add-bar{
     display: flex;
     justify-content: space-between;
-    margin: .5em 0;
-    width: 100%; 
+    align-items: center;
+    width: 100%;
+    margin: 1rem 3rem;
+    min-height: 50%;
 }
 
-.do-list span{
-    max-width: 75%; 
-    white-space: nowrap; 
-    overflow: hidden;
-    text-overflow: ellipsis; 
+.add-bar input{
+    width: 100%;
+    font-size: 22px;
+    border-radius: 10px 0 0 10px;
+    padding: .5rem 1rem;
+    background-color: rgb(250, 250, 250);
 }
 
-.do-list .checked{
-    text-decoration: line-through;
+.add-bar input:hover, .add-bar input:active, .add-bar input:focus{
+    background-color: #fff;
 }
 
-.do-list input:not(.actions input){
-    width: 75%;
-    margin-right: 10px;
-    border: 1px solid #000;
-    border-radius: 5px;
+.add-bar button{
+    background-color: #41aec9;
+    color: #fff;
+    font-size: 22px;
+    border-radius: 0 10px 10px 0;
+    padding: .5rem 1.5rem;
+    transition: .5s ease;
 }
 
-.actions input{
-    min-width: 30px;
-    min-height: 30px;
-    max-width: 30px;
-    max-height: 30px;
-    margin-right: 10px;
+.add-bar button:hover{
+    background-color: #4bc1df;
 }
 
-.do-list .actions{
+.toDo{
+    display: flex;
+    max-width: 90%;
+    margin: .5rem auto;
+    background-color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.toDo div{
     display: flex;
     align-items: center;
 }
 
-.actions svg{
+.toDo .label{
+    width: 90%;
+}
+
+.toDo .label span{
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.toDo .label input:first-child{
+    min-height: 30px;
+    min-width: 30px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.toDo .actions svg{
     max-width: 30px;
     max-height: 30px;
 }
 
-.actions svg:hover{
+.toDo .actions svg:hover{
     cursor: pointer;
-    opacity: .75;
 }
 
-
-.btn-edit{
-    fill: blue;
-    margin-right: 10px;
+.toDo .actions svg:not(:last-child){
+    margin-right: 20px;
 }
 
-.btn-remove{
-    fill: red;
+.btn-edit, .btn-remove{
+    fill: #6262a5;
+    transition: .5s ease;
+}
+
+.btn-edit:hover{
+    fill: #41aec9;
+}
+
+.btn-remove:hover{
+    fill: #E6443C;
+}
+
+.toDo .checked{
+    text-decoration: line-through;
+}
+
+.edit-input{
+    border-bottom: 2px solid #41aec9;
+    font-size: 18px;
+    padding: 0 .5rem;
+    width: 100%;
 }

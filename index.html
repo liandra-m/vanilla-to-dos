@@ -5,30 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="toDo.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
-    <title>My ToDo's</title>
+    <title>My To Dos</title>
 </head>
 <body>
-    <div class="content-wrapper">
-        <div class="content">
-            <div class="header">
-                <h1>My To Do's</h1>
-                <div class="add-to-do">
-                    <input id="toDoLabel" type="text" maxlength="128" placeholder="Take my unicorn for a walk..." />
-                    <button id="addToDo" onclick="addToDo()">Adicionar</button>
-                </div>
+    <div class="wrapper">
+        <header>
+            <div class="add-bar">    
+                <input id="add-input" type="text" placeholder="Take my unicorn for a walk..." />
+                <button id="add-btn">Adicionar</button>
             </div>
-            <ul id="list" class="do-list">
-                <li>
+        </header>
 
-                </li>
+        <section>
+            <ul class="todo-list">
+
             </ul>
-        </div>
+        </section>
     </div>
 
-    <script src="toDo.js">
-    </script>
+    <script src="toDo.js"></script>
 </body>
-</html> 
+</html>
